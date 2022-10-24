@@ -1,0 +1,1 @@
+Collapse procedurally generates a world via wave-function-collapse.
