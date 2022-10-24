@@ -89,7 +89,7 @@ const WorldControls: FC<Props> = ({}) => {
               setDisplayMode("domain");
             }}
           >
-            Posibilities
+            Possibilities
           </Button>
           <Button
             isActive={displayMode === "entropy"}
