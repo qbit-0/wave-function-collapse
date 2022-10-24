@@ -40,8 +40,12 @@ const WorldContainer = () => {
     case "biome":
       canvas = <DomainCanvas />;
       break;
+    case "domain":
+      canvas = <DomainCanvas onlyShowCollapsed={false} />;
+      break;
     case "entropy":
       canvas = <EntropyCanvas />;
+      break;
   }
 
   return <Box height="500">{canvas}</Box>;

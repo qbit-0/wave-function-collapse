@@ -84,6 +84,14 @@ const WorldControls: FC<Props> = ({}) => {
             Biome
           </Button>
           <Button
+            isActive={displayMode === "domain"}
+            onClick={() => {
+              setDisplayMode("domain");
+            }}
+          >
+            Posibilities
+          </Button>
+          <Button
             isActive={displayMode === "entropy"}
             onClick={() => {
               setDisplayMode("entropy");

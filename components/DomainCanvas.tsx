@@ -34,7 +34,11 @@ const clearCanvas = (canvas: HTMLCanvasElement, world: World) => {
   ctx.fillRect(offsetX, offsetY, width * tileSize, height * tileSize);
 };
 
-const drawDomains = (canvas: HTMLCanvasElement, world: World) => {
+const drawDomains = (
+  canvas: HTMLCanvasElement,
+  world: World,
+  onlyShowCollapsed: boolean
+) => {
   const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
   const { width, height, tileset, domains } = world;
 
@@ -45,7 +49,7 @@ const drawDomains = (canvas: HTMLCanvasElement, world: World) => {
       const domain = getCell(x, y, domains, world);
       if (!domain) return;
       domain.forEach((tileProb, tileId) => {
-        if (tileProb !== 1) return;
+        if (onlyShowCollapsed && tileProb !== 1) return;
         ctx.globalAlpha = tileProb;
         ctx.fillStyle = tileset.tiles[tileId].value;
         ctx.fillRect(
@@ -60,9 +64,9 @@ const drawDomains = (canvas: HTMLCanvasElement, world: World) => {
   }
 };
 
-type Props = {};
+type Props = { onlyShowCollapsed?: boolean };
 
-const DomainCanvas: FC<Props> = ({}) => {
+const DomainCanvas: FC<Props> = ({ onlyShowCollapsed = true }) => {
   const { world } = useContext(WorldContext);
   const { width, height } = world;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -75,7 +79,7 @@ const DomainCanvas: FC<Props> = ({}) => {
   useInterval(() => {
     const canvas = canvasRef.current as HTMLCanvasElement;
     clearCanvas(canvas, world);
-    drawDomains(canvas, world);
+    drawDomains(canvas, world, onlyShowCollapsed);
   }, 33);
 
   return <canvas ref={canvasRef} />;

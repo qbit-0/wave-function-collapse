@@ -8,7 +8,7 @@ import React, {
 } from "react";
 import { resetWorld, Rules, Tileset, World } from "../WaveFunctionCollapse";
 
-type DisplayMode = "biome" | "entropy";
+type DisplayMode = "biome" | "domain" | "entropy";
 
 type WorldContextType = {
   width: number;
