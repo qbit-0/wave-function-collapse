@@ -1,4 +1,4 @@
-import { Button, Divider, Flex, Text, VStack } from "@chakra-ui/react";
+import { Button, Divider, Flex, Stack, Text, VStack } from "@chakra-ui/react";
 import { FC, useContext } from "react";
 import { WorldContext } from "../utils/context/WorldContextProvider";
 import {
@@ -34,7 +34,7 @@ const WorldControls: FC<Props> = ({}) => {
   } = useContext(WorldContext);
 
   return (
-    <Flex gap="4">
+    <Stack direction={["column", "column", "row"]} gap="2">
       <Paper flex="1">
         <Text fontSize="lg" fontWeight="bold" textAlign="center" pb="2">
           Collapse Settings
@@ -130,7 +130,7 @@ const WorldControls: FC<Props> = ({}) => {
           </Button>
         </VStack>
       </Paper>
-    </Flex>
+    </Stack>
   );
 };
 

@@ -44,17 +44,22 @@ const Home: NextPage = () => {
             collapse to select a possibility at random. This reduces the
             possible adjacent tiles. Repeat this until all tiles are filled.
           </Text>
-
-          <Text>This project was inspired by:</Text>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/20KHNA9jTsE"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <Text>
+            Created with help from:{" "}
+            <Link
+              href="https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/"
+              target="_blank"
+            >
+              https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="https://www.boristhebrave.com/2020/04/13/wave-function-collapse-explained/"
+              target="_blank"
+            >
+              https://www.boristhebrave.com/2020/04/13/wave-function-collapse-explained/
+            </Link>
+          </Text>
         </Paper>
       </Container>
       <footer>
@@ -68,13 +73,13 @@ const Home: NextPage = () => {
               .
             </Text>
             <Text>
+              Source code at:{" "}
               <Link
                 href="https://github.com/qbit-0/wave-function-collapse"
                 target="_blank"
               >
-                Source code
-              </Link>{" "}
-              for the curious.
+                https://github.com/qbit-0/wave-function-collapse
+              </Link>
             </Text>
           </Paper>
         </Container>
