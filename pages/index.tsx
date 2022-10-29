@@ -1,4 +1,4 @@
-import { Box, Container, Link, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Link, Text } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Demo from "../components/Demo";
