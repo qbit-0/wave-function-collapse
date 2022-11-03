@@ -44,7 +44,7 @@ const Home: NextPage = () => {
       <Container maxW="8xl" my="4">
         <Paper>
           <Text>
-            {`Wave-function collapse is a proceedural generation technique very loosely inspired by wave-function collapse in quantum mechanics.`}
+            {`Wave-function collapse is a procedural generation technique very loosely inspired by wave-function collapse in quantum mechanics.`}
           </Text>
           <Text>
             Imagine that we have grass tiles, sand tiles, and water tiles.
